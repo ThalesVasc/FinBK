@@ -14,6 +14,11 @@ const JWT_SECRET = process.env.JWT_SECRET || "segredo";
 
 // --- ROTAS ---
 
+app.get("/", (req, res) => {
+  res.send("Backend funcionando!");
+});
+
+
 // Registrar usuário
 app.post("/register", async (req, res) => {
   const { nome, email, senha } = req.body;
